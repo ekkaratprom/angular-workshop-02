@@ -22,4 +22,8 @@ export class ProductListComponent implements OnInit {
       return (this.products = products);
     });
   }
+
+  onRatingClicked(message: string): void {
+    alert(message);
+  }
 }

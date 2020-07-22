@@ -45,7 +45,13 @@
             <!-- <th>{{ product.price.toFixed(3) }}</th> -->
             <th>{{ product.price | number: "1.2-2" }}</th>
             <th>{{ product.available }}</th>
-            <th>{{ product.rating }}</th>
+            <!-- <th>{{ product.rating }}</th> -->
+            <th>
+              <app-rating
+                [rating]="product.rating"
+                (ratingClicked)="onRatingClicked($event)"
+              ></app-rating>
+            </th>
           </tr>
         </tbody>
         <tbody *ngIf="products.length == 0">

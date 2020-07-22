@@ -8,6 +8,7 @@ import { ProductListComponent } from './product-list/product-list.component';
 import { ProductNamePipe } from './product-name.pipe';
 import { ProductFilterPipe } from './product-filter.pipe';
 import { FormsModule } from '@angular/forms';
+import { RatingComponent } from './rating/rating.component';
 
 @NgModule({
   declarations: [
@@ -16,6 +17,7 @@ import { FormsModule } from '@angular/forms';
     ProductListComponent,
     ProductNamePipe,
     ProductFilterPipe,
+    RatingComponent,
   ],
   imports: [BrowserModule, AppRoutingModule, FormsModule, HttpClientModule],
   providers: [],
