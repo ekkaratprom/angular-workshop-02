@@ -3,7 +3,7 @@
     List of Product Page
   </div>
   <div class="card-body">
-    <div class="row">
+    <!-- <div class="row">
       <div class="col-md-2">Filter by:</div>
       <div class="col-md-4">
         <select>
@@ -12,10 +12,10 @@
           <option>TODO</option>
         </select>
       </div>
-    </div>
+    </div> -->
     <div class="row">
       <div class="col-md-6">
-        Filtered by ... <input type="text" [(ngModel)]="filterData" />
+        Filtered by name <input type="text" [(ngModel)]="filterData" />
       </div>
     </div>
     <div class="row">
@@ -26,9 +26,9 @@
         <thead>
           <tr>
             <th>
-              <button class="btn btn-primary">
-                Product Image
-              </button>
+              <!-- <button class="btn btn-primary"> -->
+              Product Image
+              <!-- </button> -->
             </th>
             <th>Product Code</th>
             <th>Product Name</th>
@@ -38,13 +38,27 @@
           </tr>
         </thead>
         <tbody *ngIf="products.length > 0">
-          <tr *ngFor="let product of products | productFilter: filterData">
-            <th>{{ product.imageUrl }}</th>
-            <th>{{ product.code }}</th>
-            <th>{{ product.name | uppercase | productName }}</th>
+          <tr
+            *ngFor="let product of products | productFilter: filterData"
+            [routerLink]="['/product-detail/' + product.code]"
+            (click)="onProductDetail(product)"
+          >
+            <th>
+              {{ product.imageUrl }}
+            </th>
+            <th>
+              {{ product.code }}
+            </th>
+            <th>
+              {{ product.name | uppercase | productName }}
+            </th>
             <!-- <th>{{ product.price.toFixed(3) }}</th> -->
-            <th>{{ product.price | number: "1.2-2" }}</th>
-            <th>{{ product.available }}</th>
+            <th>
+              {{ product.price | number: "1.2-2" }}
+            </th>
+            <th>
+              {{ product.available }}
+            </th>
             <!-- <th>{{ product.rating }}</th> -->
             <th>
               <app-rating

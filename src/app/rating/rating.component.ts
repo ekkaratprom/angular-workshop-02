@@ -27,6 +27,7 @@ export class RatingComponent implements OnChanges {
     this.starWidth = (75 / 5) * this.rating;
   }
 
+  // tslint:disable-next-line: member-ordering
   @Output() ratingClicked: EventEmitter<String> = new EventEmitter<string>();
 
   onClickRating(): void {

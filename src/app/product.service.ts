@@ -9,8 +9,19 @@ import { Observable, of } from 'rxjs';
 export class ProductService {
   constructor(private http: HttpClient) {}
 
+  public product: Product;
+
+  setProductDetail(product: Product): void {
+    this.product = product;
+  }
+
+  getProductDetail(): Product {
+    return this.product;
+  }
+
   getAllProduct(): Observable<Product[]> {
     const products: Product[] = [];
+
     const p1 = new Product(
       'freepik.com',
       '0001',

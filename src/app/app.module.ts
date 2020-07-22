@@ -9,6 +9,7 @@ import { ProductNamePipe } from './product-name.pipe';
 import { ProductFilterPipe } from './product-filter.pipe';
 import { FormsModule } from '@angular/forms';
 import { RatingComponent } from './rating/rating.component';
+import { ProductDetailComponent } from './product-detail/product-detail.component';
 
 @NgModule({
   declarations: [
@@ -18,6 +19,7 @@ import { RatingComponent } from './rating/rating.component';
     ProductNamePipe,
     ProductFilterPipe,
     RatingComponent,
+    ProductDetailComponent,
   ],
   imports: [BrowserModule, AppRoutingModule, FormsModule, HttpClientModule],
   providers: [],

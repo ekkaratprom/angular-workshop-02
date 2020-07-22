@@ -26,4 +26,8 @@ export class ProductListComponent implements OnInit {
   onRatingClicked(message: string): void {
     alert(message);
   }
+
+  onProductDetail(product: Product): void {
+    this.service.setProductDetail(product);
+  }
 }
