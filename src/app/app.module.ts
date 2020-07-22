@@ -10,7 +10,7 @@ import { ProductFilterPipe } from './product-filter.pipe';
 import { FormsModule } from '@angular/forms';
 import { RatingComponent } from './rating/rating.component';
 import { ProductDetailComponent } from './product-detail/product-detail.component';
-
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 @NgModule({
   declarations: [
     AppComponent,
@@ -21,7 +21,13 @@ import { ProductDetailComponent } from './product-detail/product-detail.componen
     RatingComponent,
     ProductDetailComponent,
   ],
-  imports: [BrowserModule, AppRoutingModule, FormsModule, HttpClientModule],
+  imports: [
+    BrowserModule,
+    AppRoutingModule,
+    FormsModule,
+    HttpClientModule,
+    BrowserAnimationsModule,
+  ],
   providers: [],
   bootstrap: [AppComponent],
 })

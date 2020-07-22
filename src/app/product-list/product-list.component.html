@@ -40,11 +40,15 @@
         <tbody *ngIf="products.length > 0">
           <tr
             *ngFor="let product of products | productFilter: filterData"
-            [routerLink]="['/product-detail/' + product.code]"
+            [routerLink]="['/product-details/' + product.code]"
             (click)="onProductDetail(product)"
           >
             <th>
-              {{ product.imageUrl }}
+              <img
+                src="{{ product.imageUrl }}"
+                alt="{{ product.name }}"
+                style="width: 100px;"
+              />
             </th>
             <th>
               {{ product.code }}

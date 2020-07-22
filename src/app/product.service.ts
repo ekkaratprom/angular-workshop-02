@@ -23,26 +23,26 @@ export class ProductService {
     const products: Product[] = [];
 
     const p1 = new Product(
-      'freepik.com',
-      '0001',
-      'Mani Doe',
-      500.25,
+      'https://static.zara.net/photos///2020/I/0/2/p/5551/318/400/2/w/744/5551318400_6_1_1.jpg?ts=1594056064116',
+      'BLUE-5551-318',
+      'IRREGULAR STRIPE PRINT SHIRT',
+      1790.0,
       false,
       3.5
     );
     const p2 = new Product(
-      'HeyDesigner.com',
-      '0002',
-      'Danny Doe',
-      780.254,
+      'https://static.zara.net/photos///2020/I/0/2/p/2753/440/401/2/w/744/2753440401_6_1_1.jpg?ts=1594831996408',
+      'NAVY-BLUE-2753-440',
+      'WATER-REPELLENT COLOUR BLOCK JACKET',
+      3490,
       true,
       4.6
     );
     const p3 = new Product(
-      'mobbin.design',
-      '0003',
-      'Mani Doe',
-      500.2,
+      'https://static.zara.net/photos///2020/I/1/2/p/3125/520/040/2/w/744/3125520040_2_1_1.jpg?ts=1594237884343',
+      'BLACK-3125-20',
+      'XL TWO-TONE BOWLING BAG',
+      2990.0,
       true,
       2.8
     );
